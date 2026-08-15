@@ -1,5 +1,0 @@
-pandas
-snowflake
-snowflake-connector-python[secure-local-storage,pandas]
-sqlalchemy
-openpyxl
