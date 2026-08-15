@@ -1,81 +1,364 @@
-# Supply-Chain-Analytics
-<!-- Add your project banner/image here -->
+# 📦 Supply Chain Analytics
 
-# Overview
-This data analytics project focuses on analyzing and visualizing the supply chain data of a fashion and makeup product company. The dataset used in this project contains various features related to the supply chain process, including product information, sales, revenue, customer demographics, stock levels, lead times, shipping details, supplier information, and more.
+An end-to-end **Supply Chain Analytics** project that uses **Python, Snowflake, and Power BI** to transform raw supply chain data into meaningful business insights and interactive dashboards.
 
-The project workflow includes three main stages: Extract, Transform, and Load (ETL) the data using Python, loading the transformed data into Snowflake, and finally creating a dashboard in Power BI for data visualization.
+---
 
-# Dataset Overview
-The dataset comprises the following features related to the fashion and makeup product supply chain:
+## 📌 Project Overview
 
-* Product Type: The category of the product (e.g., clothing, accessories, makeup).
-* SKU: Stock Keeping Unit, a unique identifier for each product.
-* Price: The price of the product.
-* Availability: The current availability status of the product.
-* Number of Products Sold: The number of products sold for a given period.
-* Revenue Generated: The total revenue generated from product sales.
-* Customer Demographics: Information about the customers, such as age, gender, location, etc.
-* Stock Levels: The quantity of each product available in the inventory.
-* Lead Times: Time taken for an order to be fulfilled from the supplier's end to the customer's end.
-* Order Quantities: The number of products ordered in each transaction.
-* Shipping Times: Time taken for shipping products to customers.
-* Shipping Carriers: The company responsible for shipping the products.
-* Shipping Costs: The cost incurred for shipping each product.
-* Supplier Name: The name of the supplier providing the products.
-* Location: Location of the supplier.
-* Production Volumes: The volume of products manufactured.
-* Manufacturing Lead Time: Time taken for the manufacturing process.
-* Manufacturing Costs: The cost incurred during the manufacturing process.
-* Inspection Results: The results of quality inspection for products.
-* Defect Rates: The percentage of defective products.
-* Transportation Modes: The modes of transportation used to deliver products.
-* Routes: The transportation routes taken for delivery.
-* Costs: Various costs associated with the supply chain process.
+This project focuses on analyzing supply chain data for a fashion and makeup product company.
 
-## Project Steps
-###  Step 1: Extract, Transform, and Load (ETL)
+The dataset contains information related to:
 
-* Data Extraction: The dataset will be sourced from a specific location or file, such as a CSV or Excel file.
+* Products
+* Sales
+* Revenue
+* Customer demographics
+* Inventory and stock levels
+* Suppliers
+* Manufacturing
+* Shipping
+* Transportation
+* Product quality
+* Costs
 
-* Data Cleaning and Transformation: Python will be utilized to clean the data and handle missing values. Data transformation will be performed to make it suitable for analysis.
+The project follows an end-to-end analytics workflow:
 
-* Data Integration: Data from different sources or files will be integrated into a single cohesive dataset for further analysis.
+```text
+Raw Data
+   ↓
+Python ETL
+   ↓
+Data Cleaning & Transformation
+   ↓
+Snowflake Data Warehouse
+   ↓
+Power BI
+   ↓
+Interactive Dashboard & Business Insights
+```
 
-* Data Loading into Snowflake: The transformed and integrated dataset will be loaded into the Snowflake data warehouse for efficient storage and processing.
+---
 
-### Step 2: Data Visualization with Power BI
-* Data Connection: Power BI will connect to the Snowflake data warehouse to access the transformed dataset.
+## 🎯 Objectives
 
-* Dashboard Creation: A comprehensive dashboard will be created in Power BI, showcasing various supply chain metrics and KPIs. The dashboard will include interactive visualizations like charts, graphs, tables, and maps.
+The main objectives of this project are to:
 
-* Data Insights: The Power BI dashboard will allow users to gain valuable insights into the supply chain process, identify trends, and make data-driven decisions to optimize operations.
+* Clean and transform raw supply chain data.
+* Integrate supply chain information into a structured dataset.
+* Load processed data into Snowflake.
+* Analyze supply chain performance.
+* Identify trends and operational patterns.
+* Visualize important KPIs using Power BI.
+* Support data-driven supply chain decisions.
 
-## Project Structure
-The project repository will have the following structure:
+---
 
-- |-- README.md
-- |-- data/
-- |-- processed/
-- |   |-- processed_data.csv
-- |-- raw/
-- |   |--supply_chain_data.xlsx
-- |-- src/
-- |   |-- ETL.py
-- |   |-- snowflake_utils.py
-- |-- power_bi/
-- |   |-- supply_chain_dashboard.pbix
+## 📊 Dataset
 
-## Getting Started
-* Clone the repository to your local machine.
+The dataset contains multiple supply chain attributes, including:
 
-* Ensure you have Python and the required libraries installed.
+| Category       | Features                                         |
+| -------------- | ------------------------------------------------ |
+| Product        | Product Type, SKU, Price                         |
+| Sales          | Products Sold, Revenue Generated                 |
+| Customer       | Demographics                                     |
+| Inventory      | Availability, Stock Levels                       |
+| Orders         | Order Quantities                                 |
+| Shipping       | Shipping Time, Carrier, Shipping Cost            |
+| Supplier       | Supplier Name, Location                          |
+| Manufacturing  | Production Volume, Lead Time, Manufacturing Cost |
+| Quality        | Inspection Results, Defect Rates                 |
+| Transportation | Transportation Mode, Routes                      |
+| Cost           | Manufacturing, Shipping and Other Costs          |
 
-* Run the ETL script (ETL_script.py) to perform the data extraction, transformation, and loading into Snowflake.
+The original project documentation describes these dataset attributes in detail.
 
-* Connect Power BI to Snowflake using the provided connection credentials (snowflake_connection_credentials.json).
+---
 
-* Open the Power BI file (supply_chain_dashboard.pbix) to explore the supply chain dashboard.
+# 🔄 ETL Pipeline
 
-## Conclusion
-This data analytics project demonstrates how ETL can be used to process and load supply chain data into Snowflake, followed by creating an interactive and informative dashboard using Power BI. The dashboard will empower users to analyze the supply chain metrics effectively and make informed decisions to enhance the overall efficiency of the supply chain process.
+## 1. Extract
+
+The raw supply chain dataset is sourced from a CSV or Excel file.
+
+```text
+Raw Supply Chain Dataset
+          ↓
+       Python
+```
+
+## 2. Transform
+
+Python is used to:
+
+* Clean the dataset.
+* Handle missing values.
+* Transform data into an analysis-ready format.
+* Integrate relevant data into a cohesive dataset.
+
+## 3. Load
+
+The transformed dataset is loaded into **Snowflake** for storage and analysis.
+
+```text
+Python
+   ↓
+Cleaned Dataset
+   ↓
+Snowflake
+```
+
+This ETL workflow is described in the original project documentation.
+
+---
+
+# ❄️ Snowflake Data Warehouse
+
+Snowflake is used as the centralized data warehouse for the transformed supply chain dataset.
+
+The workflow is:
+
+```text
+Python ETL
+    ↓
+Processed Data
+    ↓
+Snowflake
+    ↓
+Power BI
+```
+
+This allows the processed data to be stored and queried efficiently before visualization.
+
+---
+
+# 📈 Power BI Dashboard
+
+Power BI connects to the Snowflake data warehouse and provides an interactive dashboard for analyzing supply chain performance.
+
+The dashboard can include:
+
+* KPI cards
+* Charts
+* Graphs
+* Tables
+* Maps
+* Trend analysis
+* Supply chain metrics
+
+The goal is to help users identify trends and gain insights that can support supply chain optimization.
+
+---
+
+# 🛠️ Technology Stack
+
+| Technology       | Purpose                             |
+| ---------------- | ----------------------------------- |
+| 🐍 **Python**    | ETL and data transformation         |
+| ❄️ **Snowflake** | Cloud data warehouse                |
+| 📊 **Power BI**  | Data visualization and dashboarding |
+| 📁 **Excel/CSV** | Source dataset                      |
+| 🧮 **Pandas**    | Data processing and transformation  |
+
+---
+
+# 📁 Project Structure
+
+```text
+Supply-Chain-Analytics/
+│
+├── README.md
+│
+├── data/
+│   ├── raw/
+│   │   └── supply_chain_data.xlsx
+│   │
+│   └── processed/
+│       └── processed_data.csv
+│
+├── src/
+│   ├── ETL.py
+│   └── snowflake_utils.py
+│
+└── power_bi/
+    └── supply_chain_dashboard.pbix
+```
+
+This structure follows the structure described in the original project README.
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+Install the following:
+
+* Python
+* Required Python libraries
+* Snowflake account
+* Power BI Desktop
+
+---
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/Supply-Chain-Analytics.git
+cd Supply-Chain-Analytics
+```
+
+Replace `<your-username>` with your GitHub username.
+
+---
+
+## 2. Install Python Dependencies
+
+Install the required Python libraries used by the ETL scripts.
+
+```bash
+pip install pandas
+```
+
+Additional dependencies should be installed according to the project's Python scripts.
+
+---
+
+## 3. Run the ETL Pipeline
+
+Run the ETL script:
+
+```bash
+python src/ETL.py
+```
+
+The ETL process extracts the raw dataset, cleans and transforms the data, and prepares it for loading into Snowflake.
+
+---
+
+## 4. Load Data into Snowflake
+
+Configure your Snowflake connection and load the processed dataset into your Snowflake environment.
+
+⚠️ **Never upload Snowflake usernames, passwords, API keys, or connection credentials to a public GitHub repository.**
+
+Use environment variables or a local configuration file that is included in `.gitignore`.
+
+---
+
+## 5. Open the Power BI Dashboard
+
+Open:
+
+```text
+power_bi/supply_chain_dashboard.pbix
+```
+
+Connect Power BI to the Snowflake data source and refresh the data.
+
+The original project workflow specifies connecting Power BI to Snowflake and using the resulting data for dashboard creation.
+
+---
+
+# 📊 Analysis Areas
+
+The project provides a foundation for analyzing:
+
+### Sales & Revenue
+
+* Product sales
+* Revenue generation
+* Product performance
+
+### Inventory
+
+* Stock levels
+* Product availability
+* Order quantities
+
+### Suppliers
+
+* Supplier performance
+* Supplier locations
+* Production volumes
+
+### Manufacturing
+
+* Manufacturing costs
+* Manufacturing lead time
+* Production volume
+
+### Shipping & Transportation
+
+* Shipping time
+* Shipping costs
+* Shipping carriers
+* Transportation modes
+* Routes
+
+### Quality
+
+* Inspection results
+* Defect rates
+
+---
+
+# 💡 Business Insights
+
+The Power BI dashboard is designed to help identify:
+
+* Product and sales trends
+* Inventory conditions
+* Supply chain costs
+* Supplier and manufacturing patterns
+* Shipping performance
+* Quality and defect trends
+* Potential areas for operational improvement
+
+The project aims to turn supply chain data into actionable insights for improving overall operational efficiency.
+
+---
+
+# 📸 Dashboard Preview
+
+
+
+
+```markdown
+![Supply Chain Dashboard](power_bi/dashboard_screenshot.png)
+```
+
+* Overall KPI dashboard
+* Sales & revenue analysis
+* Inventory analysis
+* Supplier analysis
+* Shipping analysis
+* Manufacturing analysis
+
+---
+
+# 🔮 Future Enhancements
+
+Possible future improvements include:
+
+* Automated ETL scheduling
+* Additional supply chain KPIs
+* Advanced Power BI dashboards
+* Predictive demand analysis
+* Inventory forecasting
+* Supplier performance scoring
+* Automated data refresh
+* Advanced cost optimization analysis
+
+---
+
+# 👨‍💻 Author
+
+**Sourav Sharma**
+
+MCA Student | Data Analytics Enthusiast
+
+---
+
+⭐ **If you find this project useful, feel free to explore the repository.**
